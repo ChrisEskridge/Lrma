@@ -2,225 +2,142 @@
 /**
 Template Name: Support
 **/
-
 get_header(); ?>
 
-	<div id="content" class="site-content">
-    	<!--<div class="slider">
-        	<div class="slider-box">
+<div id="content" class="site-content"> 
+  <!--<div class="slider">
+        <div class="slider-box">
             	<div class="pic-text">
                 	<span style="color:#dbd2be;">Collections |</span> <?php the_title(); ?>
                 </div>
             	<img src="<?php bloginfo('template_directory'); ?>/images/about.jpg" style="width:100%;">
             </div>
         </div>-->
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <?php while(have_rows('flex_content')) : the_row(); ?>
-						<?php if(get_row_layout() == 'header') : ?>
-                        
-                            <div class="slider">
-                            	<div class="restricter">
-                                <div class="slider-box2" style="background-image:url(<?php the_sub_field('background_image'); ?>)">
-                                    <div class="pic-text">
-                                        <span style="color:#dbd2be;">Support |</span> <?php the_title(); ?>
-                                    </div>
-                                    
-                                    
-                                </div>
-                                </div>
-                            </div>
-                            
-                        <?php elseif(get_row_layout() == 'pic_right') : ?>
-                        
-                        <div class="about-1">
-                            <div class="left-color">
-                            </div>
-                            <div class="restricter2">
-                                <div class="right-third-hidden">
-                                    <div class="pic-box">
-                                    
-                                    	<?php while( have_rows('image_repeater') ): the_row(); 
-
-												// vars
-												$image = get_sub_field('image');
+  
+  <?php while(have_rows('flex_content')) : the_row(); ?>
+  <?php if(get_row_layout() == 'header') : ?>
+  <div class="slider">
+    <div class="restricter">
+      <div class="slider-box2" style="background-image:url(<?php the_sub_field('background_image'); ?>)">
+        <div class="pic-text"> <span style="color:#dbd2be;">Support |</span>
+          <?php the_title(); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php elseif(get_row_layout() == 'pic_right') : ?>
+  <div class="about-1">
+    <div class="left-color"> </div>
+    <div class="restricter2">
+      <div class="right-third-hidden">
+        <div class="pic-box">
+          <?php while( have_rows('image_repeater') ): the_row(); 
+		// vars
+		$image = get_sub_field('image');
 												
-												?>
-										
-										<?php if( $image ): ?>
-														<img src="<?php the_sub_field('image'); ?>" style="width:100%;">
-										
-										<?php endif; ?>
-										
-											<?php endwhile; ?>
-                                    
-                                    </div>
-                                </div>
-                                <div class="left-2third-table">
-                                    <?php the_sub_field('text'); ?><br>
-                                    <?php the_field('paypal'); ?>
-                                    
-                                </div>
-                                <div class="right-third-hidden2">
-                                    <div class="pic-box">
-                                    
-                                    <?php while( have_rows('image_repeater') ): the_row(); 
-
-												// vars
-												$image = get_sub_field('image');
+	  ?>
+          <?php if( $image ): ?>
+          <img src="<?php the_sub_field('image'); ?>" style="width:100%;">
+          <?php endif; ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+      <div class="left-2third-table">
+        <?php the_sub_field('text'); ?>
+        <br>
+        <?php the_field('paypal'); ?>
+      </div>
+      <div class="right-third-hidden2">
+        <div class="pic-box">
+          <?php while( have_rows('image_repeater') ): the_row(); 
+		// vars
+		$image = get_sub_field('image');
 												
-												?>
-										
-										<?php if( $image ): ?>
-														<img src="<?php the_sub_field('image'); ?>" style="width:100%;">
-										
-										<?php endif; ?>
-										
-											<?php endwhile; ?>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <?php elseif(get_row_layout() == 'pic_left') : ?>
-                        
-                        <div class="about-1">
-                            <div class="right-color">
-                            </div>
-                            <div class="restricter2">
-                                <div class="left-third">
-                                    <div class="pic-box">
-                                        <?php while( have_rows('image_repeater') ): the_row(); 
-
-												// vars
-												$image = get_sub_field('image');
+	  ?>
+          <?php if( $image ): ?>
+          <img src="<?php the_sub_field('image'); ?>" style="width:100%;">
+          <?php endif; ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php elseif(get_row_layout() == 'pic_left') : ?>
+  <div class="about-1">
+    <div class="right-color"> </div>
+    <div class="restricter2">
+      <div class="left-third">
+        <div class="pic-box">
+          <?php while( have_rows('image_repeater') ): the_row(); 
+		// vars
+		$image = get_sub_field('image');
 												
-												?>
-										
-										<?php if( $image ): ?>
-														<img src="<?php the_sub_field('image'); ?>" style="width:100%;">
-										
-										<?php endif; ?>
-										
-											<?php endwhile; ?>
-                                    </div>
-                                    
-                                </div>
-                                <div class="right-2third">
-                                    <?php the_sub_field('text'); ?>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <?php elseif(get_row_layout() == 'background_pic_left') : ?>
-                        
-                        <div class="about-2" style="background-image:url(<?php the_sub_field('background_image'); ?>)">
-        	
-                            <div class="restricter2">
-                                <div class="left-third-clear2">
-                                    <div class="pic-box">
-                                        <?php while( have_rows('image_repeater') ): the_row(); 
-
-												// vars
-												$image = get_sub_field('image');
+	  ?>
+          <?php if( $image ): ?>
+          <img src="<?php the_sub_field('image'); ?>" style="width:100%;">
+          <?php endif; ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+      <div class="right-2third">
+        <?php the_sub_field('text'); ?>
+      </div>
+    </div>
+  </div>
+  <?php elseif(get_row_layout() == 'background_pic_left') : ?>
+  <div class="about-2" style="background-image:url(<?php the_sub_field('background_image'); ?>)">
+    <div class="restricter2">
+      <div class="left-third-clear2">
+        <div class="pic-box">
+          <?php while( have_rows('image_repeater') ): the_row(); 
+		// vars
+		$image = get_sub_field('image');
 												
-												?>
-										
-										<?php if( $image ): ?>
-														<img src="<?php the_sub_field('image'); ?>" style="width:100%;">
-										
-										<?php endif; ?>
-										
-											<?php endwhile; ?>
-                                    </div>
-                                </div>
-                                <div class="right-2third-clear">
-                                    <?php the_sub_field('text'); ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php elseif(get_row_layout() == 'background_pic_right') : ?>
-                        
-                        <div class="about-2">
-        	
-                            <div class="restricter2">
-                                <div class="left-third-clear2">
-                                    <div class="pic-box">
-                                        <?php while( have_rows('image_repeater') ): the_row(); 
-
-												// vars
-												$image = get_sub_field('image');
+	  ?>
+          <?php if( $image ): ?>
+          <img src="<?php the_sub_field('image'); ?>" style="width:100%;">
+          <?php endif; ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+      <div class="right-2third-clear">
+        <?php the_sub_field('text'); ?>
+      </div>
+    </div>
+  </div>
+  <?php elseif(get_row_layout() == 'background_pic_right') : ?>
+  <div class="about-2">
+    <div class="restricter2">
+      <div class="left-third-clear2">
+        <div class="pic-box">
+          <?php while( have_rows('image_repeater') ): the_row(); 
+		// vars
+		$image = get_sub_field('image');
 												
-												?>
-										
-										<?php if( $image ): ?>
-														<img src="<?php the_sub_field('image'); ?>" style="width:100%;">
-										
-										<?php endif; ?>
-										
-											<?php endwhile; ?>
-                                    </div>
-                                </div>
-                                <div class="right-2third-clear">
-                                    <?php the_sub_field('text'); ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php elseif(get_row_layout() == 'background') : ?>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div class="european-pic" style="background-image:url(<?php the_sub_field('background_image'); ?>)">
-        	  				<div class="restricter2">
-                              <div class="pic-quote">
-                                <?php the_sub_field('text'); ?>
-                              </div>
-                            </div>
-        				</div>
-					   <?php endif; ?>
-                		<?php endwhile; ?>
-                
-             
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <!--<div class="about-1">
+	  ?>
+          <?php if( $image ): ?>
+          <img src="<?php the_sub_field('image'); ?>" style="width:100%;">
+          <?php endif; ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+      <div class="right-2third-clear">
+        <?php the_sub_field('text'); ?>
+      </div>
+    </div>
+  </div>
+  <?php elseif(get_row_layout() == 'background') : ?>
+  <div class="european-pic" style="background-image:url(<?php the_sub_field('background_image'); ?>)">
+    <div class="restricter2">
+      <div class="pic-quote">
+        <?php the_sub_field('text'); ?>
+      </div>
+    </div>
+  </div>
+  <?php endif; ?>
+  <?php endwhile; ?>
+  
+  <!--<div class="about-1">
         	<div class="left-color">
             </div>
         	<div class="restricter2">
@@ -272,11 +189,9 @@ get_header(); ?>
                     <div class="pic-box">
                         <img src="<?php bloginfo('template_directory'); ?>/images/lr.jpg" style="width:100%;">
                     </div>
-                </div>-->
-            
-            
-            
-                <!--<div class="right-third">
+                </div>--> 
+  
+  <!--<div class="right-third">
                     <div class="pic-box">
                         <img src="<?php bloginfo('template_directory'); ?>/images/lr.jpg" style="width:100%;">
                     </div>
@@ -288,22 +203,16 @@ get_header(); ?>
     Another gift of the Museum's founders was the donation of 142 Japanese Ukiyo-e woodblock prints from the 18th and 19th centuries. Given by Lauren's father, Wallace B. Rogers, this outstanding collection features work by such masters as Harunobu, Masanobu, Utamaro, Eishi, Hokusai and Hiroshige and attracts visitors from throughout the United States.
     
     In the 1970s, Thomas and Harriet Gibbons, co-owners of the local newspaper, donated their extensive collection of sterling silver. The Gibbons English Georgian Silver Collection includes 65 major objects associated with the serving of tea, including tea caddies, tea and coffee pots, baskets for cakes and sweetmeats, and salvers. Works by John Gibbons, William Plummer, Hester Bateman, John Scofield and Henry Greenway are included.  
-                </div>-->
-            <!--</div>
+                </div>--> 
+  <!--</div>
             
         </div>
         
         <div class="european-pic">
         	  
-        </div>-->
-        
-        
-        
-        
-            
-            
-            
-        	<!--<div class="exhibition">
+        </div>--> 
+  
+  <!--<div class="exhibition">
                 <div class="restricter2">
                     <div class="ec-title">
                         <div class="sub-top-shadow">
@@ -346,8 +255,8 @@ get_header(); ?>
                     </div>
                     </div>
                 </div>
-            </div>-->
-        <!--<div class="subscribe">
+            </div>--> 
+  <!--<div class="subscribe">
         	<div class="sub-top-shadow">
             </div>
             <div class="sub-wrap">
@@ -360,8 +269,11 @@ get_header(); ?>
             </div>
             <div class="sub-bottom-shadow">
             </div>
-        </div>-->
-    </div><!-- #content -->
+        </div>--> 
+</div>
+<!-- #content -->
 
 <?php
 get_footer();
+
+
